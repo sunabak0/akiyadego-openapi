@@ -1,0 +1,91 @@
+openapi: '3.0.2'
+info:
+  title: 空き家で Go の URL 一覧
+  version: '1.0'
+servers:
+  - url: https://akiyadego.com
+
+paths:
+  /:
+    get:
+      description: 'ウェルカムページ'
+      responses:
+        '200':
+          description: O
+  /top:
+    get:
+      description: '全投稿一覧'
+      parameters: []
+      responses:
+        '200':
+          description: OK
+  /index:
+    get:
+      description: '現在ログインしているユーザの投稿一覧'
+      parameters: []
+      responses:
+        '200':
+          description: OK
+  /signup:
+    post:
+      description: '新規登録画面'
+      parameters: []
+      responses:
+        '200':
+          description: OK
+  /login:
+    get:
+      description: 'ログイン画面'
+      parameters: []
+      responses:
+        '200':
+          description: OK
+  /authenticate:
+    post:
+      description: 'DBにユーザを登録'
+      parameters: []
+      responses:
+        '200':
+          description: OK
+  /logout:
+    delete:
+      description: 'セッションを削除してログアウトする'
+      parameters: []
+      responses:
+        '200':
+          description: OK
+  /post/new:
+    get:
+      description: '新規投稿画面'
+      parameters: []
+      responses:
+        '200':
+          description: OK
+  /post/save:
+    post:
+      description: 'DBに投稿を登録'
+      parameters: []
+      responses:
+        '200':
+          description: OK
+  /post/edit:
+    get:
+      description: '投稿編集画面'
+      parameters: []
+      responses:
+        '200':
+          description: OK
+  /post/update:
+    put:
+      description: 'DBに編集された内容更新かける'
+      parameters: []
+      responses:
+        '200':
+          description: OK
+  /post/delete:
+    delete:
+      description: 'DBの投稿を削除'
+      parameters: []
+      responses:
+        '200':
+          description: OK
