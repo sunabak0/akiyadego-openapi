@@ -15,10 +15,16 @@ paths:
   /top:
     get:
       description: '全投稿一覧'
+      operationId: AllPost
       parameters: []
+#      requestBody: TODO: Cookie を表現する
       responses:
         '200':
           description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostResponse'
   /index:
     get:
       description: '現在ログインしているユーザの投稿一覧'
@@ -89,3 +95,44 @@ paths:
       responses:
         '200':
           description: OK
+
+components:
+  schemas:
+    Post:
+      required:
+        - id
+        - imagePath
+        - title
+        - category
+        - prefecture
+        - description
+        - userId
+        - createdAt
+      type: object
+      properties:
+        id:
+          type: integer
+        imagePath:
+          type: string
+        title:
+          type: string
+        category:
+          type: string
+        prefecture:
+          type: string
+        description:
+          type: string
+        userId:
+          type: string
+        createdAt:
+          type: string
+
+    PostResponse:
+      required:
+        - posts
+      type: object
+      properties:
+        posts:
+          type: array
+          items:
+            $ref: '#/components/schemas/Post'
