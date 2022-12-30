@@ -35,3 +35,6 @@ components:
       $ref: './components/schemas/Post.yml'
     PostResponse:
       $ref: './components/schemas/PostResponse.yml'
+  parameters:
+    SessionToken:
+      $ref: './components/parameters/X-SessionToken.yml'
