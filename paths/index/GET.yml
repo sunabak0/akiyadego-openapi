@@ -1,0 +1,7 @@
+---
+get:
+  description: '現在ログインしているユーザの投稿一覧'
+  parameters: []
+  responses:
+    '200':
+      description: OK

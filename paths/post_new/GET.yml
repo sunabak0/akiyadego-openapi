@@ -1,0 +1,7 @@
+---
+get:
+  description: '新規投稿画面'
+  parameters: []
+  responses:
+    '200':
+      description: OK

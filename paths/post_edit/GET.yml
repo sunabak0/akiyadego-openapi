@@ -1,0 +1,7 @@
+---
+get:
+  description: '投稿編集画面'
+  parameters: []
+  responses:
+    '200':
+      description: OK

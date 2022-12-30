@@ -1,0 +1,9 @@
+---
+required:
+  - posts
+type: object
+properties:
+  posts:
+    type: array
+    items:
+      $ref: './Post.yml'

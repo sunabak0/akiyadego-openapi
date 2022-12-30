@@ -1,0 +1,7 @@
+---
+delete:
+  description: 'セッションを削除してログアウトする'
+  parameters: []
+  responses:
+    '200':
+      description: OK

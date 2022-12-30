@@ -1,0 +1,7 @@
+---
+post:
+  description: '新規登録画面'
+  parameters: []
+  responses:
+    '200':
+      description: OK

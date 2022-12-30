@@ -1,0 +1,7 @@
+---
+post:
+  description: 'DBにユーザを登録'
+  parameters: []
+  responses:
+    '200':
+      description: OK

@@ -1,0 +1,6 @@
+---
+get:
+  description: 'ウェルカムページ'
+  responses:
+    '200':
+      description: O

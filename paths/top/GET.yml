@@ -1,0 +1,12 @@
+---
+get:
+  description: '全投稿一覧'
+  operationId: AllPost
+  parameters: []
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../../openapi.yml#/components/schemas/PostResponse'
