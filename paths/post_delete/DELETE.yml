@@ -1,0 +1,7 @@
+---
+delete:
+  description: 'DBの投稿を削除'
+  parameters: []
+  responses:
+    '200':
+      description: OK

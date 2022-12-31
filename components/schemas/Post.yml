@@ -1,0 +1,28 @@
+---
+required:
+  - id
+  - imagePath
+  - title
+  - category
+  - prefecture
+  - description
+  - userId
+  - createdAt
+type: object
+properties:
+  id:
+    type: integer
+  imagePath:
+    type: string
+  title:
+    type: string
+  category:
+    type: string
+  prefecture:
+    type: string
+  description:
+    type: string
+  userId:
+    type: string
+  createdAt:
+    type: string

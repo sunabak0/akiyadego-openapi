@@ -2,137 +2,36 @@ openapi: '3.0.2'
 info:
   title: 空き家で Go の URL 一覧
   version: '1.0'
-servers:
-  - url: https://akiyadego.com
 
 paths:
   /:
-    get:
-      description: 'ウェルカムページ'
-      responses:
-        '200':
-          description: O
+    $ref: './paths/root/GET.yml'
   /top:
-    get:
-      description: '全投稿一覧'
-      operationId: AllPost
-      parameters: []
-#      requestBody: TODO: Cookie を表現する
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PostResponse'
+    $ref: './paths/top/GET.yml'
   /index:
-    get:
-      description: '現在ログインしているユーザの投稿一覧'
-      parameters: []
-      responses:
-        '200':
-          description: OK
+    $ref: './paths/index/GET.yml'
   /signup:
-    post:
-      description: '新規登録画面'
-      parameters: []
-      responses:
-        '200':
-          description: OK
+    $ref: './paths/signup/POST.yml'
   /login:
-    get:
-      description: 'ログイン画面'
-      parameters: []
-      responses:
-        '200':
-          description: OK
+    $ref: './paths/login/GET.yml'
   /authenticate:
-    post:
-      description: 'DBにユーザを登録'
-      parameters: []
-      responses:
-        '200':
-          description: OK
+    $ref: './paths/authenticate/POST.yml'
   /logout:
-    delete:
-      description: 'セッションを削除してログアウトする'
-      parameters: []
-      responses:
-        '200':
-          description: OK
+    $ref: './paths/logout/DELETE.yml'
   /post/new:
-    get:
-      description: '新規投稿画面'
-      parameters: []
-      responses:
-        '200':
-          description: OK
+    $ref: './paths/post_new/GET.yml'
   /post/save:
-    post:
-      description: 'DBに投稿を登録'
-      parameters: []
-      responses:
-        '200':
-          description: OK
+    $ref: './paths/post_save/POST.yml'
   /post/edit:
-    get:
-      description: '投稿編集画面'
-      parameters: []
-      responses:
-        '200':
-          description: OK
+    $ref: './paths/post_edit/GET.yml'
   /post/update:
-    put:
-      description: 'DBに編集された内容更新かける'
-      parameters: []
-      responses:
-        '200':
-          description: OK
+    $ref: './paths/post_update/PUT.yml'
   /post/delete:
-    delete:
-      description: 'DBの投稿を削除'
-      parameters: []
-      responses:
-        '200':
-          description: OK
+    $ref: './paths/post_delete/DELETE.yml'
 
 components:
   schemas:
     Post:
-      required:
-        - id
-        - imagePath
-        - title
-        - category
-        - prefecture
-        - description
-        - userId
-        - createdAt
-      type: object
-      properties:
-        id:
-          type: integer
-        imagePath:
-          type: string
-        title:
-          type: string
-        category:
-          type: string
-        prefecture:
-          type: string
-        description:
-          type: string
-        userId:
-          type: string
-        createdAt:
-          type: string
-
+      $ref: './components/schemas/Post.yml'
     PostResponse:
-      required:
-        - posts
-      type: object
-      properties:
-        posts:
-          type: array
-          items:
-            $ref: '#/components/schemas/Post'
+      $ref: './components/schemas/PostResponse.yml'

@@ -1,0 +1,7 @@
+---
+put:
+  description: 'DBに編集された内容更新かける'
+  parameters: []
+  responses:
+    '200':
+      description: OK

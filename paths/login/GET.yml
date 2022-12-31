@@ -1,0 +1,7 @@
+---
+get:
+  description: 'ログイン画面'
+  parameters: []
+  responses:
+    '200':
+      description: OK
