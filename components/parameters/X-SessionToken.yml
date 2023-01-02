@@ -1,0 +1,13 @@
+#
+# そもそも cookie を使っていない理由
+# - OpenAPI Generator で Kotlin + SpringBoot の @CookieValue としてうまく生成されないため
+# - https://github.com/sunabak0/akiyadego-kotlin/issues/74#issuecomment-1364519055
+# - もし生成されるようになったら、 Cookie に乗り換えたい
+#
+---
+in: header
+name: X-SessionToken
+required: false
+description: セッションを表現するためのトークン
+schema:
+  type: string
